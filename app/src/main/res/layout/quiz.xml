@@ -19,15 +19,19 @@
         app:layout_constraintVertical_bias="0.2"/>
 
     <!-- 2) RadioButtons -->
+
+    <!-- 3) Botão Continuar -->
+
     <RadioGroup
         android:id="@+id/rgColors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tvQuestion"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.35">
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion">
 
         <RadioButton
             android:id="@+id/rbBlue"
@@ -48,15 +52,14 @@
             android:text="Verde" />
     </RadioGroup>
 
-    <!-- 3) Botão Continuar -->
     <Button
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
         android:text="Continuar"
-        app:layout_constraintTop_toBottomOf="@id/rgColors"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.6"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgColors" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

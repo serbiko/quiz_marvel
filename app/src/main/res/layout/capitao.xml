@@ -3,15 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Imagem clicável -->
+    <!-- 1) imagem clicável para voltar -->
     <ImageButton
         android:id="@+id/btnCapitao"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/capitao"
         android:background="@null"
-        android:scaleType="centerCrop"
-        android:contentDescription="Capitão América"/>
+        android:contentDescription="Capitão América"
+        android:scaleType="centerCrop"/>
 
+    <!-- 2) botão compartilhar visível -->
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compartilhar"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"/>
 </FrameLayout>
+
 

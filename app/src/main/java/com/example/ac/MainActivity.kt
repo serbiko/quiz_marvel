@@ -36,52 +36,49 @@ class MainActivity : AppCompatActivity() {
 
     private fun showCapitao() {
         setContentView(R.layout.capitao)
-        val btn = findViewById<ImageButton>(R.id.btnCapitao)
-
-        // clique longo: compartilhar
-        btn.setOnLongClickListener {
+        // voltar ao início
+        findViewById<ImageButton>(R.id.btnCapitao).setOnClickListener {
+            showMainScreen()
+        }
+        // compartilhar
+        findViewById<Button>(R.id.btnShare).setOnClickListener {
             val share = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_TEXT, "Eu sou o Capitão América!")
             }
             startActivity(Intent.createChooser(share, "Compartilhar seu herói"))
-            true
         }
-
-        // clique normal: volta ao início
-        btn.setOnClickListener { showMainScreen() }
     }
 
     private fun showHomemDeFerro() {
         setContentView(R.layout.homemdeferro)
-        val btn = findViewById<ImageButton>(R.id.btnHomemDeFerro)
-
-        btn.setOnLongClickListener {
+        findViewById<ImageButton>(R.id.btnHomemDeFerro).setOnClickListener {
+            showMainScreen()
+        }
+        findViewById<Button>(R.id.btnShare).setOnClickListener {
             val share = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_TEXT, "Eu sou o Homem de Ferro!")
             }
             startActivity(Intent.createChooser(share, "Compartilhar seu herói"))
-            true
         }
-
-        btn.setOnClickListener { showMainScreen() }
     }
 
     private fun showHulk() {
         setContentView(R.layout.hulk)
-        val btn = findViewById<ImageButton>(R.id.btnHulk)
-
-        btn.setOnLongClickListener {
+        findViewById<ImageButton>(R.id.btnHulk).setOnClickListener {
+            showMainScreen()
+        }
+        findViewById<Button>(R.id.btnShare).setOnClickListener {
             val share = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_TEXT, "Eu sou um herói de super força como o Hulk!")
             }
             startActivity(Intent.createChooser(share, "Compartilhar seu herói"))
-            true
         }
-
-        btn.setOnClickListener { showMainScreen() }
     }
+
+
+
 }
 
